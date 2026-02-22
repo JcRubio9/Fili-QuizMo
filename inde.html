@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Fili-QuizMo</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+
+<header class="top-header">
+  <div class="header-left">
+    <img src="logo.png" width="60px" alt="Little Einstein Logo" class="logo" />
+    <div class="header-text">
+      <h1>Fili-QuizMo</h1>
+      <p>Your Interactive Filipino Learning Companion</p>
+    </div>
+  </div>
+</header>
+
+<section id="home" class="active home-education">
+  <div class="home-content">
+    <h2>Welcome Students & Teachers!</h2>
+    <p class="home-desc">
+      Fili-QuizMo is an educational quiz system designed to help learners master Filipino subjects through interactive quizzes.
+    </p>
+
+    <div class="feature-grid">
+      <div class="feature-card" onclick="showSection('news')" role="button" tabindex="0" onkeypress="handleKeyPress(event, 'news')">
+        📚
+        <h3>News</h3>
+        <p>Latest academic updates</p>
+      </div>
+
+      <div class="feature-card" onclick="showSection('signup')" role="button" tabindex="0" onkeypress="handleKeyPress(event, 'signup')">
+        🧑‍🎓
+        <h3>Sign Up</h3>
+        <p>Create student or teacher account</p>
+      </div>
+
+      <div class="feature-card" onclick="showSection('login')" role="button" tabindex="0" onkeypress="handleKeyPress(event, 'login')">
+        🏠
+        <h3>Login</h3>
+        <p>Enter learning dashboard</p>
+      </div>
+
+      <div class="feature-card" onclick="showSection('download')" role="button" tabindex="0" onkeypress="handleKeyPress(event, 'download')">
+        📲
+        <h3>Download</h3>
+        <p>Access Fili-QuizMo app</p>
+      </div>
+
+      <div class="feature-card" onclick="showSection('about')" role="button" tabindex="0" onkeypress="handleKeyPress(event, 'about')">
+        📖
+        <h3>About Us</h3>
+        <p>Learn about the system</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="news">
+  <h2>News</h2>
+  <p>Updates about the Fili-QuizMo educational platform.</p>
+  <P>Stay tuned for the latest news, features, and improvements to enhance your learning experience!</P>
+  <button onclick="goHome()">Back</button>
+</section>
+
+<section id="signup">
+  <h2>Sign Up</h2>
+  <input type="email" placeholder="Enter school email" />
+  <button onclick="emailVerification()">Email Verification</button>
+  <button onclick="emailVerified()">Email Verified</button>
+  <button onclick="goHome()">Back</button>
+</section>
+
+<section id="login">
+  <h2>Login</h2>
+  <input id="username" type="text" placeholder="Username" />
+  <input id="password" type="password" placeholder="Password" />
+  <button onclick="loginAdmin()">Login as Admin</button>
+  <button onclick="loginTeacher()">Login as Teacher</button>
+  <button onclick="goHome()">Back</button>
+</section>
+
+<section id="download">
+  <h2>Download</h2>
+  <button onclick="downloadApp()">Download Fili-QuizMo App</button>
+  <button onclick="goHome()">Back</button>
+</section>
+
+<section id="admin">
+  <h2>Admin Dashboard</h2>
+  <button onclick="alert('Manage Quizzes clicked!')">Manage Quizzes</button>
+  <button onclick="alert('View Statistics clicked!')">View Statistics</button>
+  <button onclick="alert('Manage Users clicked!')">Manage Users</button>
+  <button onclick="alert('Settings clicked!')">Settings</button>
+  <button onclick="logout()">Log out</button>
+</section>
+
+<section id="teacher">
+  <h2>Teacher Panel</h2>
+  <button onclick="alert('View Quizzes clicked!')">View Quizzes</button>
+  <button onclick="alert('Manage Students clicked!')">Manage Students</button>
+  <button onclick="alert('View Scores clicked!')">View Scores</button>
+  <button onclick="logout()">Log out</button>
+</section>
+
+<section id="about">
+  <h2>About Fili-QuizMo</h2>
+  <p>
+    Fili-QuizMo is a dynamic digital learning platform that supports Filipino education through quizzes, assessments, and progress tracking.
+    It was created to empower both students and teachers by providing a comprehensive yet easy-to-use tool to enhance Filipino language learning.
+  </p>
+  <p>
+    The system offers interactive quizzes designed to challenge learners, reinforce concepts, and track improvement over time.
+    With Fili-QuizMo, teachers can manage classrooms efficiently, assign quizzes tailored to students' needs, and monitor their progress seamlessly.
+  </p>
+  <p>
+    Our mission is to make learning the Filipino language accessible, engaging, and effective, promoting a love for the national language and culture.
+    We continuously update the platform based on user feedback and educational standards to ensure Fili-QuizMo remains a relevant and trusted learning companion.
+  </p>
+  <p>
+    Join us in this journey to improve Filipino literacy and competence through technology-driven learning.
+  </p>
+  <p>
+    Thank you for choosing Fili-QuizMo as your educational partner!
+  </p>
+  <button onclick="goHome()">Back</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

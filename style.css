@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #eef2f7;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.top-header {
+  background: #0d47a1;
+  color: white;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  height: 100px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.header-text p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+/* SECTIONS */
+section {
+  display: none;
+  background: white;
+  margin: 25px auto;
+  padding: 30px 40px;
+  width: 90%;
+  max-width: 650px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  text-align: center;
+}
+
+section.active {
+  display: block;
+}
+
+h2 {
+  margin-bottom: 12px;
+  color: #0d47a1;
+  font-weight: 700;
+}
+
+/* INPUTS */
+input {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* BUTTONS */
+button {
+  margin: 8px;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #1976d2;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #0d47a1;
+}
+
+/* HOME EDUCATION DESIGN */
+.home-education {
+  background: linear-gradient(135deg, #ffffff, #e3f2fd);
+}
+
+.home-desc {
+  font-size: 16px;
+  margin: 10px 0 35px;
+  color: #444;
+  max-width: 530px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* FEATURE GRID */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 18px;
+  justify-items: center;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: #ffffff;
+  padding: 25px 15px;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 150px;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #0d47a1;
+  outline: none;
+}
+
+.feature-card:hover,
+.feature-card:focus {
+  transform: translateY(-7px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.2);
+  outline: none;
+}
+
+.feature-card h3 {
+  margin-top: 12px;
+  font-size: 19px;
+}
+
+.feature-card p {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #555;
+  user-select: none;
+}
+
+/* Responsive for small devices */
+@media (max-width: 400px) {
+  .feature-grid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+  input, button {
+    font-size: 14px;
+  }
+  .top-header {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 15px 15px;
+  }
+  .header-text h1 {
+    font-size: 24px;
+  }
+  .header-text p {
+    font-size: 11px;
+  }
+}
