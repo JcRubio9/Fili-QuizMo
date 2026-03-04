@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Fili-QuizMo | Learning Portal</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+
+<header class="top-header">
+  <div class="header-left">
+    <button onclick="goHome()" class="logo">
+        <img src="logo.png" alt="Logo" class="logoIMG" />
+    </button>
+    <div class="header-text">
+      <h1>Fili-QuizMo</h1>
+      <p>Your Interactive Filipino Learning Companion</p>
+    </div>
+    <nav class="nav-links">
+      <button onclick="scrollToSection('news-area')">News</button>
+      <button onclick="scrollToSection('about-area')">About Us</button>
+      <button onclick="scrollToSection('download-area')">Download</button>
+    </nav>
+  </div>
+</header>
+
+<main class="main-container">
+    <section id="home" class="active">
+        <div class="welcome-box">
+            <h2>Welcome Students & Teachers!</h2>
+            <p class="home-desc">Fili-QuizMo is an educational quiz system designed to help learners master Filipino subjects through interactive quizzes.</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card" onclick="scrollToSection('news-area')">
+                    <div class="card-icon">📚</div>
+                    <h3>News</h3>
+                    <p>Latest academic updates</p>
+                </div>
+                <div class="feature-card" onclick="showSection('signup')">
+                    <div class="card-icon">🧑‍🎓</div>
+                    <h3>Sign Up</h3>
+                    <p>Create student or teacher account</p>
+                </div>
+                <div class="feature-card" onclick="showSection('login')">
+                    <div class="card-icon">🏠</div>
+                    <h3>Login</h3>
+                    <p>Enter learning dashboard</p>
+                </div>
+                <div class="feature-card" onclick="scrollToSection('download-area')">
+                    <div class="card-icon">📲</div>
+                    <h3>Download</h3>
+                    <p>Access Fili-QuizMo app</p>
+                </div>
+                <div class="feature-card" onclick="scrollToSection('about-area')">
+                    <div class="card-icon">📖</div>
+                    <h3>About Us</h3>
+                    <p>Learn about the system</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="news-area" class="stacked-section">
+            <h2>News</h2>
+            <p>Stay tuned for the latest news, features, and improvements to enhance your learning experience!</p>
+            <p>The new update for this website is the dashboard.</p>
+            <p>Updates about the Fili-QuizMo educational platform.</p>
+            <p>The new update for this website is the UI and News, Download, and about Us. </p>
+        </div>
+
+        <div id="download-area" class="stacked-section">
+            <h2>Download</h2>
+            <button class="primary-btn" onclick="downloadApp()">Download Fili-QuizMo App</button>
+        </div>
+
+        <div id="about-area" class="stacked-section">
+            <h2>About Us</h2>
+            <p>The system offers interactive quizzes designed to challenge learners, reinforce concepts, and track improvement over time.
+    With Fili-QuizMo, teachers can manage classrooms efficiently, assign quizzes tailored to students' needs, and monitor their progress seamlessly.</p>
+</p>
+            <p> Our mission is to make learning the Filipino language accessible, engaging, and effective, promoting a love for the national language and culture.
+    We continuously update the platform based on user feedback and educational standards to ensure Fili-QuizMo remains a relevant and trusted learning companion.</p>
+</p>
+<p>Join us on this educational journey and experience the joy of learning Filipino with Fili-QuizMo!</p>
+<p>Fili-QuizMo is a dynamic digital learning platform that supports Filipino education through quizzes, assessments, and progress tracking.
+    It was created to empower both students and teachers by providing a comprehensive yet easy-to-use tool to enhance Filipino language learning.</p>
+<p>
+    Thank you for choosing Fili-QuizMo as your educational partner!
+</p>
+        </div>
+    </section>
+
+    <section id="login" class="auth-section">
+        <h2>Login</h2>
+        <input id="email" type="email" placeholder="Email Address" />
+        <input id="password" type="password" placeholder="Password" />
+        <div class="auth-group">
+            <button onclick="handleLogin('admin')">Login as Admin</button>
+            <button onclick="handleLogin('teacher')">Login as Teacher</button>
+        </div>
+        <button class="back-link" onclick="goHome()">Back to Home</button>
+    </section>
+
+    <section id="signup" class="auth-section">
+        <h2>Sign Up</h2>
+        <input type="email" id="regEmail" placeholder="Enter school email" />
+        <input type="password" id="regPass" placeholder="Password" />
+        <button onclick="emailVerification()">Email Verification</button>
+        <button onclick="emailVerified()" id="verifiedStatusBtn">Email Verified</button>
+        <button class="back-link" onclick="goHome()">Back to Home</button>
+    </section>
+
+    <section id="admin" class="dash-section">
+        <div class="dash-content">
+            <h2>Admin Dashboard</h2>
+            <div class="dash-grid">
+                <button class="dash-card">Manage Quizzes</button>
+                <button class="dash-card">View Statistics</button>
+                <button class="dash-card">Manage Users</button>
+                <button class="dash-card" onclick="showSection('adminSettings')">Settings</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="teacher" class="dash-section">
+        <div class="dash-content">
+            <h2>Teacher Panel</h2>
+            <div class="dash-grid">
+                <button class="dash-card">View Quizzes</button>
+                <button class="dash-card">Manage Students</button>
+                <button class="dash-card">View Scores</button>
+                <button class="dash-card" onclick="showSection('teacherSettings')">Settings</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="adminSettings" class="settings-box">
+        <h2>Admin Settings</h2>
+        <div class="settings-menu">
+            <button onclick="alert('Change Password')">Change Password</button>
+            <button onclick="alert('Change Profile')">Change Profile</button>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </div>
+        <button class="back-link" onclick="showSection('admin')">Back to Dashboard</button>
+    </section>
+
+    <section id="teacherSettings" class="settings-box">
+        <h2>Teacher Settings</h2>
+        <div class="settings-menu">
+            <button onclick="alert('Change Password')">Change Password</button>
+            <button onclick="alert('Change Profile')">Change Profile</button>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </div>
+        <button class="back-link" onclick="showSection('teacher')">Back to Dashboard</button>
+    </section>
+</main>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
